@@ -1,10 +1,13 @@
-// https://www.codewars.com/kata/5208f99aee097e6552000148/train/java
-
-import java.util.Arrays;
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/submissions/
 
 class Solution {
-    public static String camelCase(String input) {
-        return String.join(" ", input.split("(?=\\p{Upper})"));
+    public static int maxProfit(int[] prices) {
+        int profit = 0;
+        if (prices == null || prices.length == 0) return profit;
 
+        for (int i = 0; i < prices.length - 1; i++) {
+            if (prices[i + 1] > prices[i]) profit += prices[i + 1] - prices[i];
+        }
+        return profit;
     }
 }
