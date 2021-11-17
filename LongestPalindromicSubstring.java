@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/longest-palindromic-substring/submissions/
-
+// Cubic runtime
 
 import java.util.ArrayList;
 import java.util.Collections;
